@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title My Shop
+        title #{docTitle}
         link(rel="stylesheet", href="/shop.css")
     body
         header.main-header
@@ -14,3 +14,16 @@ html(lang="en")
                         a.active(href="/") Shop
                     li.main-header_items 
                         a(href="/admin/add-product") Add Product
+        main
+            .grid 
+                each product in prods
+                    article.card.product-item 
+                        header.card__header  
+                            h1.product_title Great Book
+                        div.card_image
+                            img(src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052._UY475_SS475_.jpg", alt="A Book")
+                        div.card__content  
+                            h2.product__price $19.89
+                            p.product__description A very intresting book to study tbh! 
+                        .card__action 
+                            button.btn Add to cart
