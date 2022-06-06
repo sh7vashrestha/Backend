@@ -6,7 +6,7 @@ const router = express.Router();
 const routedir =require('../util/path');
 const products = [];
 router.get('/add-product',(req, res, next) => {
-    res.sendFile(path.join(routedir,  'htmls','add-product.html'));
+    res.render('add-product', {pageTitle: "Add-Product"});
 });
 
 
