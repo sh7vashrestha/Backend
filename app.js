@@ -15,7 +15,6 @@ const app = express();
 //For PUG
 // app.set('view engine', 'pug');
 // app.set('views', 'htmls');
-
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
