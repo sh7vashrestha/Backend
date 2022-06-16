@@ -24,4 +24,14 @@ exports.getProduct = (req, res, next) => {
         productCSS:true });
     });
 };
+exports.editProduct = (req, res, next) => {
+    Product.fetchAll(products => {
+    res.render('admin/edit-product', { 
+        pageTitle:'Add-Product',
+        path: '/admin/edit-product',
+        formsCSS:true,
+         productCSS:true,
+        activeEditProduct: true});
+    });
+};
 
