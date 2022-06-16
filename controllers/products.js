@@ -34,4 +34,24 @@ exports.editProduct = (req, res, next) => {
         activeEditProduct: true});
     });
 };
+exports.adminProduct = (req, res, next) => {
+    Product.fetchAll(products => {
+    res.render('admin/products', { 
+        pageTitle:'Add-Product',
+        path: '/admin/products',
+        formsCSS:true,
+         productCSS:true,
+        activeAdminProduct: true});
+    });
+};
+exports.Product = (req, res, next) => {
+    Product.fetchAll(products => {
+    res.render('admin/products', { 
+        pageTitle:'Add-Product',
+        path: '/admin/products',
+        formsCSS:true,
+         productCSS:true,
+        activeEditProduct: true});
+    });
+};
 
